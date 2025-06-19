@@ -1,0 +1,12 @@
+# prd servers
+
+[div_servers]
+server1 ansible_host=13.221.105.191
+server2 ansible_host=54.147.134.181
+server1 ansible_user=ec2-user
+server2 ansible_user=ubuntu
+
+[div_servers:vars]
+ansible_python_interpreter=/usr/bin/python3
+ansible_ssh_private_key_file=/home/ubuntu/keys/terra-ansible-key.pem
+

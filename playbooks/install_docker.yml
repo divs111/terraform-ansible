@@ -1,0 +1,30 @@
+-
+ name: Install Docker
+ hosts: div_servers
+ become: yes
+
+ tasks:
+
+  - name: Install Docker when OS is Ubuntu
+    package:
+      name: docker.io
+      state: latest
+    when: ansible_distribution == "Ubuntu"
+
+  - name: Install Docker when OS is Amazon
+    dnf:
+      name: docker
+      state: present
+    when: ansible_distribution == "Amazon"
+
+  - name: Install Docker when OS is RedHat
+    dnf:
+      name: docker-ce
+      state: present
+    when: ansible_distribution == "RedHat"
+
+  - name: Start Docker
+    service:
+      name: docker
+      state: started
+      enabled: yes 

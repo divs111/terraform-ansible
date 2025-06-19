@@ -1,0 +1,11 @@
+# dev servers
+
+[div_servers]
+server1 ansible_host=44.201.252.34
+server2 ansible_host=34.201.241.61
+server1 ansible_user=ec2-user
+server2 ansible_user=ubuntu
+
+[div_servers:vars]
+ansible_python_interpreter=/usr/bin/python3
+ansible_ssh_private_key_file=/home/ubuntu/keys/terra-ansible-key.pem
