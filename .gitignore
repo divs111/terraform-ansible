@@ -1,0 +1,4 @@
+.terra*
+terra-ansible-key.pem
+terra-ansible-key.pub
+terraform.tfstate
